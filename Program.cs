@@ -73,8 +73,8 @@ void Task_56()
 // Задача 56. Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 {
     Random rand = new Random();
-    int rows = 4;
-    int columns = 3;
+    int rows = rand.Next(3, 10);
+    int columns = rand.Next(3, 10);
     int[,] Array = new int[rows, columns];
     FillArray(Array, 3, 10);
     Console.WriteLine("Случайный массив: ");
@@ -111,6 +111,7 @@ void Task_56()
     {
         Console.Write(Array[index, j] + "\t");
     }
+    Console.WriteLine(String.Empty);
 
 }
 Task_56();
